@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Parallax Background | AsmrProg</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar-items">
+            <h2>超凡如风科技</h2>
+            <button class="menu-toggle">☰</button> <!-- 汉堡菜单按钮 -->
+            <nav class="nav-links">
+                <a href="./VLX/index.html">微领袖影视</a>
+                <a href="https://rfkong04.github.io/VLX">微领袖影视·周周公益</a>
+                <a href="http://rfzh.art.blog/">如风智绘</a>
+                <a href="http://rfgpt.code.blog/">RF.GPT AI</a>
+                <a href="http://scs.data.blog/">S.C.S</a>
+                <a href="http://20class4.school.blog/">高中回忆博客</a>
+                <a href="">联系</a>
+            </nav>
+        </div>
+    </div>
+
+    <video autoplay muted loop class="video-background">
+        <source src="./pic/m.mp4" type="video/mp4"> <!-- 替换为您视频文件的路径 -->
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="container">
+        <div class="dynamic-text">
+            <span id="text-display"></span>
+        </div>
+
+        <!-- 标题内容 -->
+        <div class="main-content" style="display: none;">
+            <h1>超凡如风科技</h1>
+            <p>C.F.R.F Technology</p>
+        </div>
+
+        <script>
+            const text = "一战到底，永不言弃！";  // 打字机显示的文字
+            let index = 0;
+
+            function typeEffect() {
+                const display = document.getElementById("text-display");
+
+                if (index < text.length) {
+                    display.textContent += text[index];  // 逐字追加显示
+                    index++;
+                    setTimeout(typeEffect, 200);  // 控制打字速度
+                } else {
+                    setTimeout(() => {
+                        // 隐藏打字机效果内容，显示标题内容
+                        document.querySelector('.dynamic-text').style.display = 'none';
+                        document.querySelector('.main-content').style.display = 'block';
+                    }, 1000); // 等待1秒后切换内容
+                }
+            }
+
+            typeEffect();  // 启动打字效果
+        </script>
+
+    </div>
+
+    <div class="blank">
+        <div class="tia">
+            <h2>这里啥都没有😂</h2>
+        </div>
+        <div class="tia">
+            <h2>不是忘了写🫢</h2>
+        </div>
+        <div class="tia">
+            <h2>而是没得写🤦‍♂️</h2>
+        </div>
+    </div>
+    <div class="tis">
+        <h2>旗下产品</h2>
+    </div>
+    <div class="movie-list">
+        <div class="movie-card">
+            <img src="./pic/vlx.png" alt="Movie Poster" class="movie-poster">
+            <div class="movie-info">
+                <h3 class="movie-title">微领袖</h3>
+                <a href="./VLX/index.html" class="movie-link">了解更多</a>
+            </div>
+        </div>
+        <div class="movie-card">
+            <img src="./pic/gpt.png" alt="Movie Poster" class="movie-poster">
+            <div class="movie-info">
+                <h3 class="movie-title">RF.GPT</h3>
+                <a href="http://rfgpt.code.blog/" class="movie-link">了解更多</a>
+            </div>
+        </div>
+        <div class="movie-card">
+            <img src="./pic/zh.png" alt="Movie Poster" class="movie-poster">
+            <div class="movie-info">
+                <h3 class="movie-title">如风智绘</h3>
+                <a href="http://rfzh.art.blog/" class="movie-link">了解更多</a>
+            </div>
+        </div>
+        <div class="movie-card">
+            <img src="./pic/scs.png" alt="Movie Poster" class="movie-poster">
+            <div class="movie-info">
+                <h3 class="movie-title">S.C.S</h3>
+                <a href="http://scs.data.blog/" class="movie-link">了解更多</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="blank-2">
+        <div class="footer">
+            <div class="column">
+                <h3>旗下</h3>
+                <ul>
+                    <li><a href="./VLX/index.html">微领袖影视</a></li>
+                    <li><a href="#">如风智绘</a></li>
+                    <li><a href="#">Movie Bar</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>关于我们</h3>
+                <ul>
+                    <li><a href="#">是一个团队</a></li>
+                    <li><a href="#">是一群少年</a></li>
+                    <li><a href="#">没事写着玩的，纯属爱好</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>联系方式</h3>
+                <ul>
+                    <li><a href="#">R.F.KONG@QQ.com</a></li>
+                    <li><a href="#">QQ:1018413847</a></li>
+                    <li><a href="#">@RFKONG</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>其他</h3>
+                <ul>
+                    <li><a href="#">本网页由R.F.KONG编写</a></li>
+                    <li><a href="#">由 ChatGPT-4o 提供技术支持</a></li>
+                    <li><a href="#">Over💕</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
+            document.querySelector('.nav-links').classList.toggle('show');
+        });
+    </script>
+</body>
+
+</html>
