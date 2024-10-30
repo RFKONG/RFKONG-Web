@@ -1,4 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap'); */
+@font-face {
+    font-family: 'tb';
+    src: url('./fonts/TaoBao.woff') format('woff');
+    font-style: normal;
+    /* 字体样式 */
+}
+
+@font-face {
+    font-family: 'ali';
+    src: url('./fonts/Alimama.woff2') format('woff2');
+    font-weight: 350;
+    /* 字体粗细 */
+    font-style: normal;
+    /* 字体样式 */
+}
 
 * {
     padding: 0;
@@ -10,19 +25,26 @@
 body,
 .container {
     padding-top: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 
     /* 顶栏高度 */
     h1 {
-        font-family: 微软雅黑;
+        font-family: 'tb', sans-serif;
+        background: linear-gradient(to left,rgb(255, 173, 173),white, rgb(255, 122, 144));
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
         font-size: 5rem;
         padding: 0.5rem;
+        letter-spacing: 8px;
     }
 
     p {
-        font-family: 微软雅黑;
+        font-family: 'tb', sans-serif;
+        background: linear-gradient(to right, rgb(255, 172, 172),white, rgb(255, 122, 144));
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
         font-size: 2rem;
         padding: 0.5rem;
+        letter-spacing: 3px;
     }
 }
 
@@ -40,14 +62,16 @@ body,
     }
 
     .container h1 {
-        font-family: 微软雅黑;
+        font-family: 'tb', sans-serif;
         font-size: 2.6rem;
         padding: 0.5rem;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
     .container p {
-        font-family: 微软雅黑;
+        font-family: 'tb', sans-serif;
+        background: linear-gradient(to left,white,rgb(255, 111, 135));
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
         font-size: 1.3rem;
         padding: 0.5rem;
     }
@@ -73,50 +97,39 @@ body::-webkit-scrollbar {
     display: flex;
     align-items: center;
     padding-left: 20px;
-    /* 顶栏与左边缘的距离 */
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.3);
     z-index: 10;
 }
 
-/* 顶栏项目容器样式 */
 .navbar-items {
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    /* 调整项目间隔 */
 }
 
-/* 标题和导航链接样式 */
-.navbar h2 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #ffffff;
-    margin-right: 2rem;
-    /* 标题与导航链接的间隔 */
+.logo-container {
+    margin-right: 1.3rem;
+}
+
+.logo {
+    margin-top: 6.5px;
+    height: 43px;
+    width: auto;
 }
 
 .navbar a {
+    font-family: 'ali', sans-serif;
     text-decoration: none;
     color: #ffffff;
     font-size: 1rem;
     transition: color 0.3s;
 }
 
-/* 鼠标悬停效果 */
 .navbar a:hover {
-    color: #0090c9;
+    color: #ff8e8e;
 }
 
-/* 小屏幕时隐藏导航链接，仅显示标题 */
-/* 顶栏样式 */
-.navbar-items {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-}
-
-/* 隐藏导航链接，默认显示汉堡菜单按钮 */
 .nav-links {
     display: flex;
     gap: 1.5rem;
@@ -137,12 +150,11 @@ body::-webkit-scrollbar {
         /* 显示汉堡菜单按钮 */
         position: absolute;
         right: 20px;
-        /* 距离顶栏右侧的距离，可以根据需要调整 */
         font-size: 1.5rem;
         background: none;
         border: none;
         cursor: pointer;
-        color: #ffffff;
+        color: #ff8080;
     }
 
     .nav-links {
@@ -161,6 +173,7 @@ body::-webkit-scrollbar {
     }
 
     .nav-links a {
+        font-family: 'ali', sans-serif;
         padding: 10px 0;
         width: 100%;
     }
@@ -215,8 +228,8 @@ body::-webkit-scrollbar {
 
 .blank {
     min-height: 50vh;
-    /* 设置为60vh以确保有足够的高度 */
-    background-color: #000000;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius:15px;
 }
 
 .dynamic-text {
@@ -339,12 +352,10 @@ body::-webkit-scrollbar {
     text-align: center;
     width: 100%;
     min-height: 30vh;
-    /* 确保空白区域有足够的高度 */
-    background-color: #000000;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .footer {
-    color: #ffffff;
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -364,6 +375,8 @@ body::-webkit-scrollbar {
 }
 
 .footer .column h3 {
+    font-family: 'tb', sans-serif;
+    color:#000000;
     text-align: center;
     padding: 10px;
     margin-bottom: 1.5rem;
@@ -382,12 +395,13 @@ body::-webkit-scrollbar {
 }
 
 .footer .column ul li a {
-    color: #fff;
+    font-family: 'ali', sans-serif;
+    color: #000000;
     text-decoration: none;
     display: block;
     transition: all 0.3s ease;
 }
 
 .footer .column ul li a:hover {
-    color: #ccc;
+    color: #ff3f3f;
 }
