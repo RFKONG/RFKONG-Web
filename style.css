@@ -49,7 +49,7 @@ body,
 }
 
 /* 卡片布局在移动端调整为单列 */
-@media (max-width: 768px) {
+@media (max-width:800px) {
     .second {
         flex-direction: column;
         align-items: center;
@@ -63,7 +63,7 @@ body,
 
     .container h1 {
         font-family: 'tb', sans-serif;
-        font-size: 2.6rem;
+        font-size: 3rem;
         padding: 0.5rem;
     }
 
@@ -72,7 +72,7 @@ body,
         background: linear-gradient(to left,white,rgb(255, 111, 135));
         -webkit-text-fill-color: transparent;
         background-clip: text;
-        font-size: 1.3rem;
+        font-size: 1.8rem;
         padding: 0.5rem;
     }
 }
