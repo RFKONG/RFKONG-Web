@@ -43,7 +43,7 @@ body::-webkit-scrollbar {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding-left: 20px;
+        padding-left: 10px;
         backdrop-filter: blur(5px);
         background-color: transparent;
         z-index: 100;
@@ -51,7 +51,7 @@ body::-webkit-scrollbar {
 
     .navbar a {
         padding-left: 10px;
-        font-size: 0.5em;
+        font-size: 0.8em;
     }
 }
 
