@@ -97,6 +97,13 @@ section {
     margin-left: 20px;
 }
 
+@media only screen and (max-width: 600px) {
+    .navbar ul li {
+        list-style: none;
+        margin-left: 3px;
+    }
+}
+
 .navbar ul li a {
     text-decoration: none;
     padding: 6px 15px;
