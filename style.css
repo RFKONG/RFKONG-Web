@@ -1,16 +1,23 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap'); */
-@font-face {
+/* @font-face {
     font-family: 'tb';
     src: url('./fonts/TaoBao.woff') format('woff');
     font-style: normal;
-    /* 字体样式 */
-}
+
+} */
 
 @font-face {
     font-family: 'ali';
     src: url('./fonts/Alimama.woff2') format('woff2');
     font-weight: 350;
     /* 字体粗细 */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'aliB';
+    src: url('./fonts/Alimama.woff2') format('woff2');
+    font-weight:600;
     font-style: normal;
     /* 字体样式 */
 }
@@ -28,20 +35,22 @@ body,
 
     /* 顶栏高度 */
     h1 {
-        font-family: 'tb', sans-serif;
-        background: linear-gradient(to left,rgb(255, 173, 173),white, rgb(255, 122, 144));
+        font-family: 'aliB', sans-serif;
+        /* background: linear-gradient(to left,rgb(255, 173, 173),white, rgb(255, 122, 144));
         -webkit-text-fill-color: transparent;
-        background-clip: text;
+        background-clip: text; */
+        color: #ffffff;
         font-size: 5rem;
         padding: 0.5rem;
         letter-spacing: 8px;
     }
 
     p {
-        font-family: 'tb', sans-serif;
-        background: linear-gradient(to right, rgb(255, 172, 172),white, rgb(255, 122, 144));
+        font-family: 'aliB', sans-serif;
+        /* background: linear-gradient(to right, rgb(255, 172, 172),white, rgb(255, 122, 144));
         -webkit-text-fill-color: transparent;
-        background-clip: text;
+        background-clip: text; */
+        color: #ffffff;
         font-size: 2rem;
         padding: 0.5rem;
         letter-spacing: 3px;
@@ -62,14 +71,14 @@ body,
     }
 
     .container h1 {
-        font-family: 'tb', sans-serif;
+        font-family: 'aliB', sans-serif;
         font-size: 3rem;
         padding: 0.5rem;
     }
 
     .container p {
-        font-family: 'tb', sans-serif;
-        background: linear-gradient(to left,white,rgb(255, 111, 135));
+        font-family: 'aliB', sans-serif;
+        background: linear-gradient(to left, white, rgb(255, 111, 135));
         -webkit-text-fill-color: transparent;
         background-clip: text;
         font-size: 1.8rem;
@@ -228,8 +237,8 @@ body::-webkit-scrollbar {
 
 .blank {
     min-height: 50vh;
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius:15px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
 }
 
 .dynamic-text {
@@ -272,8 +281,8 @@ body::-webkit-scrollbar {
     font-size: 2rem;
     color: #ffffff;
     text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     width: 100%;
     height: auto;
     display: flex;
@@ -283,15 +292,32 @@ body::-webkit-scrollbar {
 }
 
 .tia {
-    font-size: 1.2rem;
     color: #ffffff;
     display: flex;
     align-items: center;
     padding-top: 5px;
     /* 垂直居中 */
     justify-content: center;
-    /* 水平居中 */
-    height: 200px;
+    height: 100px;
+}
+.tia h2{
+    font-size: 1.5rem;
+    font-family: 'aliB', sans-serif;
+}
+.tia P{
+    font-family: 'ali', sans-serif;
+    font-size: 1.4rem;
+}
+
+@media (max-width: 768px) {
+    .tia h2{
+        font-size: 1.2rem;
+        font-family: 'aliB', sans-serif;
+    }
+    .tia P{
+        font-family: 'ali', sans-serif;
+        font-size: 1.0rem;
+    }
 }
 
 .movie-list {
@@ -376,7 +402,7 @@ body::-webkit-scrollbar {
 
 .footer .column h3 {
     font-family: 'tb', sans-serif;
-    color:#000000;
+    color: #000000;
     text-align: center;
     padding: 10px;
     margin-bottom: 1.5rem;
