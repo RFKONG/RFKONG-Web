@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: 'ali';
-    src: url('./fonts/Alimama.woff2') format('woff2');
+    src: url('../fonts/Alimama.woff2') format('woff2');
     font-weight: 350;
     /* 字体粗细 */
     font-style: normal;
@@ -16,7 +16,7 @@
 
 @font-face {
     font-family: 'aliB';
-    src: url('./fonts/Alimama.woff2') format('woff2');
+    src: url('../fonts/Alimama.woff2') format('woff2');
     font-weight:600;
     font-style: normal;
     /* 字体样式 */
