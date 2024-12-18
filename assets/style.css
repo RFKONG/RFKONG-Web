@@ -17,7 +17,7 @@
 @font-face {
     font-family: 'aliB';
     src: url('../fonts/Alimama.woff2') format('woff2');
-    font-weight:600;
+    font-weight: 600;
     font-style: normal;
     /* 字体样式 */
 }
@@ -78,8 +78,8 @@ body,
 
     .container p {
         font-family: 'aliB', sans-serif;
-        background: linear-gradient(to left, white, rgb(255, 111, 135));
-        -webkit-text-fill-color: transparent;
+        /* background: linear-gradient(to left, white, rgb(255, 111, 135));
+        -webkit-text-fill-color: transparent; */
         background-clip: text;
         font-size: 1.8rem;
         padding: 0.5rem;
@@ -90,6 +90,24 @@ body,
 body {
     overflow: hidden;
     overflow-y: scroll;
+    background:
+        linear-gradient(45deg, rgba(255, 154, 158, 0.8), rgba(250, 208, 196, 0.8), rgba(161, 196, 253, 0.8), rgba(194, 233, 251, 0.8), rgba(255, 204, 153, 0.8), rgba(255, 230, 189, 0.8));
+    background-size: 400% 400%;
+    animation: flowAnimation 12s ease infinite;
+}
+
+@keyframes flowAnimation {
+    0% {
+        background-position: 0% 50%, 100% 50%, 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%, 0% 50%, 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%, 100% 50%, 0% 50%;
+    }
 }
 
 body::-webkit-scrollbar {
@@ -300,21 +318,24 @@ body::-webkit-scrollbar {
     justify-content: center;
     height: 100px;
 }
-.tia h2{
+
+.tia h2 {
     font-size: 1.5rem;
     font-family: 'aliB', sans-serif;
 }
-.tia P{
+
+.tia P {
     font-family: 'ali', sans-serif;
     font-size: 1.4rem;
 }
 
 @media (max-width: 768px) {
-    .tia h2{
+    .tia h2 {
         font-size: 1.2rem;
         font-family: 'aliB', sans-serif;
     }
-    .tia P{
+
+    .tia P {
         font-family: 'ali', sans-serif;
         font-size: 1.0rem;
     }
