@@ -92,7 +92,7 @@ body {
     overflow-y: scroll;
     background:
         linear-gradient(45deg, rgba(255, 154, 158, 0.8), rgba(250, 208, 196, 0.8), rgba(161, 196, 253, 0.8), rgba(194, 233, 251, 0.8), rgba(255, 204, 153, 0.8), rgba(255, 230, 189, 0.8));
-    background-size: 400% 400%;
+    background-size: 200% 300%;
     animation: flowAnimation 12s ease infinite;
 }
 
@@ -154,7 +154,7 @@ body::-webkit-scrollbar {
 }
 
 .navbar a:hover {
-    color: #ff8e8e;
+    color: #d68effc0;
 }
 
 .nav-links {
@@ -181,7 +181,7 @@ body::-webkit-scrollbar {
         background: none;
         border: none;
         cursor: pointer;
-        color: #ff8080;
+        color: #d080ff;
     }
 
     .nav-links {
@@ -222,7 +222,12 @@ body::-webkit-scrollbar {
     /* 背景视频在其他内容后面 */
     object-fit: cover;
     /* 保持比例填充 */
+    /* transition: filter 0.5s ease; */
 }
+
+/* .video-blur {
+    filter: blur(10px);
+} */
 
 .container {
     color: #ffffff;
@@ -450,5 +455,5 @@ body::-webkit-scrollbar {
 }
 
 .footer .column ul li a:hover {
-    color: #ff3f3f;
+    color: #6c4185da;
 }
