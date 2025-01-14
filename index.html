@@ -46,26 +46,31 @@
         </div>
 
         <script>
-            const text = "欢迎你的访问,祝你2025新年快乐!";
+            const text = "欢迎你的来访,\n祝你2025新年快乐!";
             let index = 0;
+            let currentText = "";
 
             function typeEffect() {
                 const display = document.getElementById("text-display");
 
                 if (index < text.length) {
-                    display.textContent += text[index];  // 逐字追加显示
+                    if (text[index] === '\n') {
+                        currentText += '<br>';
+                    } else {
+                        currentText += text[index];
+                    }
+                    display.innerHTML = currentText;
                     index++;
-                    setTimeout(typeEffect, 200);  // 控制打字速度
+                    setTimeout(typeEffect, 200);
                 } else {
                     setTimeout(() => {
-                        // 隐藏打字机效果内容，显示标题内容
                         document.querySelector('.dynamic-text').style.display = 'none';
                         document.querySelector('.main-content').style.display = 'block';
-                    }, 1000); // 等待1秒后切换内容
+                    }, 1000);
                 }
             }
 
-            typeEffect();  // 启动打字效果
+            typeEffect();
         </script>
 
     </div>
@@ -135,7 +140,7 @@
                     <li><a href="#">本网页由R.F.KONG编写</a></li>
                     <li><a href="#">由 ChatGPT-4o 提供技术支持</a></li>
                     <li><a href="#">Over💕</a></li>
-                    <li><a href="#">2025.1.1</a></li>
+                    <li><a href="#">2025.1.14</a></li>
                 </ul>
             </div>
         </div>
