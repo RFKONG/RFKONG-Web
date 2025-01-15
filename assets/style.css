@@ -5,7 +5,23 @@
     font-style: normal;
 
 } */
+#oml2d-tips {
+    background-color: rgba(196, 129, 255, 0.626) !important;
+}
+#oml2d-tips-content {
+    color: #ffffff !important;
+    font-family: 'ali', sans-serif;
+}
 
+#oml2d-statusBar {
+    background-color: rgba(212, 94, 255, 0.548) !important;
+    font-family: 'aliB', sans-serif;
+}
+.oml2d-menus-item {
+    color: rgba(196, 129, 255, 0.626) !important;
+}
+
+/* js css */
 @font-face {
     font-family: 'ali';
     src: url('../fonts/Alimama.woff2') format('woff2');
@@ -339,32 +355,50 @@ body::-webkit-scrollbar {
 .tia {
     color: #ffffff;
     display: flex;
+    flex-direction: column;
+    /* Added to stack elements vertically */
     align-items: center;
-    padding-top: 5px;
-    /* 垂直居中 */
     justify-content: center;
-    height: 100px;
+    padding: 20px;
+    /* Increased padding */
+    height: auto;
+    max-width: 800px;
+    /* Added max-width for better readability */
+    margin: 0 auto;
+    /* Center the container */
 }
 
 .tia h2 {
     font-size: 1.5rem;
     font-family: 'aliB', sans-serif;
+    margin-bottom: 20px;
+    /* Increased spacing */
+    text-align: center;
+    /* Ensure heading is centered */
+    letter-spacing: 1px;
+    /* Added letter spacing */
 }
 
-.tia P {
+.tia p {
     font-family: 'ali', sans-serif;
     font-size: 1.4rem;
+    margin: 15px 0;
+    /* Increased vertical margins */
+    line-height: 1.6;
+    /* Increased line height */
+    text-align: center;
+    /* Center paragraph text */
 }
 
 @media (max-width: 768px) {
     .tia h2 {
         font-size: 1.2rem;
-        font-family: 'aliB', sans-serif;
     }
 
-    .tia P {
-        font-family: 'ali', sans-serif;
-        font-size: 1.0rem;
+    .tia p {
+        font-size: 1rem;
+        line-height: 1.4;
+        /* Adjusted for mobile */
     }
 }
 
