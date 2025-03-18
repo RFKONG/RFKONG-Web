@@ -90,27 +90,19 @@ body,
 body {
     overflow: hidden;
     overflow-y: scroll;
-    background:
-        url('https://dailybing.com/api/v1/UHD') center/contain no-repeat,
-        linear-gradient(45deg, rgba(255, 124, 128, 0.8), rgba(230, 178, 166, 0.8), rgba(131, 166, 223, 0.8), rgba(164, 203, 221, 0.8), rgba(225, 174, 123, 0.8), rgba(225, 200, 159, 0.8));
-    background-attachment: fixed;
-    background-size: cover, 200% 300%;
-    animation: flowAnimation 12s ease infinite;
+    background: transparent;
+    /* 移除原有背景 */
 }
 
-/* @keyframes flowAnimation {
-    0% {
-        background-position: 0% 50%, 100% 50%, 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%, 0% 50%, 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%, 100% 50%, 0% 50%;
-    }
-} */
+/* 添加Three.js画布样式 */
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
 
 body::-webkit-scrollbar {
     display: none;
