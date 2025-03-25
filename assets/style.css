@@ -119,7 +119,7 @@ body::-webkit-scrollbar {
     align-items: center;
     padding-left: 20px;
     backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(0, 0, 0, 0.111);
     z-index: 10;
 }
 
@@ -253,7 +253,7 @@ body::-webkit-scrollbar {
 
 .blank {
     min-height: 50vh;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color:  rgba(0, 0, 0, 0.440);
     border-radius: 15px;
 }
 
@@ -335,38 +335,28 @@ body::-webkit-scrollbar {
     color: #ffffff;
     display: flex;
     flex-direction: column;
-    /* Added to stack elements vertically */
     align-items: center;
     justify-content: center;
     padding: 20px;
-    /* Increased padding */
     height: auto;
     max-width: 800px;
-    /* Added max-width for better readability */
     margin: 0 auto;
-    /* Center the container */
 }
 
 .tia h2 {
     font-size: 1.5rem;
     font-family: 'aliB', sans-serif;
     margin-bottom: 20px;
-    /* Increased spacing */
     text-align: center;
-    /* Ensure heading is centered */
     letter-spacing: 1px;
-    /* Added letter spacing */
 }
 
 .tia p {
     font-family: 'ali', sans-serif;
     font-size: 1.4rem;
     margin: 15px 0;
-    /* Increased vertical margins */
     line-height: 1.6;
-    /* Increased line height */
     text-align: center;
-    /* Center paragraph text */
 }
 
 @media (max-width: 768px) {
@@ -377,7 +367,6 @@ body::-webkit-scrollbar {
     .tia p {
         font-size: 1rem;
         line-height: 1.4;
-        /* Adjusted for mobile */
     }
 }
 
@@ -439,7 +428,7 @@ body::-webkit-scrollbar {
     text-align: center;
     width: 100%;
     min-height: 30vh;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color:  rgba(0, 0, 0, 0.440);
 }
 
 .footer {
@@ -463,7 +452,7 @@ body::-webkit-scrollbar {
 
 .footer .column h3 {
     font-family: 'tb', sans-serif;
-    color: #000000;
+    color: #e8e8e8;
     text-align: center;
     padding: 10px;
     margin-bottom: 1.5rem;
@@ -483,12 +472,12 @@ body::-webkit-scrollbar {
 
 .footer .column ul li a {
     font-family: 'ali', sans-serif;
-    color: #000000;
+    color: #dadada;
     text-decoration: none;
     display: block;
     transition: all 0.3s ease;
 }
 
 .footer .column ul li a:hover {
-    color: #6c4185da;
+    color: #d58eff;
 }
