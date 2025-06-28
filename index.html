@@ -5,12 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>R.F.KONG | 别派如风</title>
-    <meta name="description" content="R.F.KONG的个人主页,超凡如风科技工作小组组长，感谢您的来访！">
-    <meta itemprop="image" content="https://g.cloudimg.cc/2025/01/10/m1n4ys.webp">
+    <meta name="description" content="R.F.KONG的个人主页，超凡如风科技工作小组组长，致力于科技、艺术与学术研究的跨界探索。">
+    <meta name="keywords" content="R.F.KONG, 别派如风, 超凡如风科技, 科技工作者, 学者, 诗人, 影视制作, 公益">
+    <meta name="author" content="R.F.KONG">
+    <meta itemprop="image" content="https://me.rfkong.top/pic/show.png">
     <meta name="msvalidate.01" content="CC8DB647AEDFE98042ED4F90BFE5375D" />
     <link rel="icon" href="./pic/ai.svg" type="image/x-icon">
     <link rel="stylesheet" href="./assets/style.css">
-    <!-- <script src="./assets/script.js" defer></script> -->
+    <!-- <script src="https://unpkg.com/live2dapi-noa@latest/npm/sequential/autoload.js"></script> -->
+    <script src="https://unpkg.com/live2dapi-noa@latest/npm/random/autoload.js"></script>
+    <link rel="stylesheet" href="./assets/left.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/live2dapi-noa@latest/css/right.css" /> -->
+    <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
 </head>
 
 <body>
@@ -44,7 +50,7 @@
         </div>
 
         <script>
-            const text = "这里是我的个人主页,\n欢迎你的来访😊!";
+            const text = "你好呀!\n这里是我的个人主页,\n欢迎你的来访😊!";
             let index = 0;
             let currentText = "";
 
@@ -100,90 +106,41 @@
                 srcset="https://vvvv.video.blog/wp-content/uploads/2024/11/c50179b5ly1hvlhqvf29og208c08ck9v.gif 300w, https://vvvv.video.blog/wp-content/uploads/2024/11/c50179b5ly1hvlhqvf29og208c08ck9v.gif?w=150&amp;h=150 150w"
                 sizes="(max-width: 300px) 100vw, 300px"></figure>
         <div class="music-player">
-            <div class="player-container">
-                <audio id="audio" src="https://o.pan.vmhost.cc/files/67c66e4842de6/wsnl.mp3"></audio>
-                <!--                 <audio id="audio" src="https://vps.rfkong.top/view.php/dfe35a243840c3b822012746370af29d.flac"></audio> -->
-                <div class="player-controls">
-                    <button id="playPauseBtn" onclick="togglePlay()">▶</button>
-                    <div class="progress-container">
-                        <div id="progress-bar">
+            <p class="music-title">奶龙每日一言：</p>
+            <p id="hitokoto" class="music-hitokoto">
+                <a href="#" id="hitokoto_text">:D 获取中...</a>
+            </p>
+            <div class="header-container">
+                <div class="album-cover-container">
+                    <div class="album-cover">
+                        <img id="album-img" src="./assets/music/这就是爱.jpg" alt="歌曲封面" class="cover-image">
+                        <div class="play-indicator">
+                            <div class="play-icon"></div>
                         </div>
                     </div>
                 </div>
+                <div class="info-container">
+                    <audio id="audio" src="assets/music/这就是爱.mp3"></audio>
+                    <div class="song-info">
+                        <span id="song-title">这就是爱</span> - <span id="song-artist">张杰</span>
+                    </div>
+                    <div class="player-controls">
+                        <button id="playPauseBtn" onclick="togglePlay()">▶</button>
+                        <span id="current-time">00:00</span>
+                        <div class="progress-container" onclick="seek(event)">
+                            <div id="progress-bg"></div>
+                            <div id="progress-bar"></div>
+                            <div id="progress-handle"></div>
+                        </div>
+                        <span id="duration">00:00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="lyrics-container">
+                <div id="lyrics"></div>
             </div>
         </div>
     </div>
-    <!-- <div class="tis">
-    </div> -->
-
-    <style>
-        .music-player {
-            width: 120px;
-            margin: auto;
-            background: rgba(255, 255, 255, 0.333);
-            padding: 15px;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-        }
-
-        .player-controls {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        #playPauseBtn {
-            background: none;
-            border: 2px solid #fff;
-            color: #fff;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        #playPauseBtn:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-        .progress-container {
-            flex: 1;
-            height: 4px;
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 2px;
-        }
-
-        #progress-bar {
-            width: 0%;
-            height: 100%;
-            background: #fff;
-            border-radius: 2px;
-            transition: width 0.1s linear;
-        }
-    </style>
-
-    <script>
-        const audio = document.getElementById('audio');
-        const playPauseBtn = document.getElementById('playPauseBtn');
-        const progressBar = document.getElementById('progress-bar');
-
-        function togglePlay() {
-            if (audio.paused) {
-                audio.play();
-                playPauseBtn.textContent = '⏸';
-            } else {
-                audio.pause();
-                playPauseBtn.textContent = '▶';
-            }
-        }
-
-        audio.addEventListener('timeupdate', () => {
-            const progress = (audio.currentTime / audio.duration) * 100;
-            progressBar.style.width = progress + '%';
-        });
-    </script>
-
     <div class="blank-2">
         <div class="footer">
             <div class="column">
@@ -219,17 +176,11 @@
                     <li><a href="#">R.F.KONG的个人主页</a></li>
                     <li><a href="#">欢迎欢迎欢迎你😊</a></li>
                     <li><a href="#">Over❤️</a></li>
-                    <li><a href="#">2025.3.25🕜</a></li>
+                    <li><a href="#">2025.6.28🕜</a></li>
                 </ul>
             </div>
         </div>
     </div>
-
-    <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function () {
-            document.querySelector('.nav-links').classList.toggle('show');
-        });
-    </script>
     <script type="module">
 
         import * as THREE from "https://cdn.skypack.dev/three@0.136.0";
@@ -350,6 +301,147 @@
             renderer.render(scene, camera);
         });
 
+    </script>
+    <script>
+        const audio = document.getElementById('audio');
+        const playPauseBtn = document.getElementById('playPauseBtn');
+        const progressBar = document.getElementById('progress-bar');
+        const progressHandle = document.getElementById('progress-handle');
+        const progressBg = document.getElementById('progress-bg');
+        const currentTimeEl = document.getElementById('current-time');
+        const durationEl = document.getElementById('duration');
+        const lyricsEl = document.getElementById('lyrics');
+        const albumImg = document.getElementById('album-img');
+        let lyricsData = [];
+        let lyricsLoaded = false;
+        let activeLineIndex = -1;
+        let isPlaying = false;
+        function formatTime(sec) {
+            if (isNaN(sec)) return "00:00";
+            let m = Math.floor(sec / 60);
+            let s = Math.floor(sec % 60);
+            return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+        }
+        function togglePlay() {
+            if (audio.paused) {
+                audio.play();
+                isPlaying = true;
+                albumImg.classList.add('playing');
+            } else {
+                audio.pause();
+                isPlaying = false;
+                albumImg.classList.remove('playing');
+            }
+        }
+        audio.addEventListener('play', () => {
+            playPauseBtn.textContent = '⏸';
+            isPlaying = true;
+            albumImg.classList.add('playing');
+        });
+        audio.addEventListener('pause', () => {
+            playPauseBtn.textContent = '▶';
+            isPlaying = false;
+            albumImg.classList.remove('playing');
+        });
+        audio.addEventListener('loadedmetadata', () => {
+            durationEl.textContent = formatTime(audio.duration);
+        });
+        audio.addEventListener('timeupdate', () => {
+            const progress = (audio.currentTime / audio.duration) * 100;
+            progressBar.style.width = progress + '%';
+            progressHandle.style.left = progress + '%';
+            currentTimeEl.textContent = formatTime(audio.currentTime);
+            updateLyrics(audio.currentTime);
+        });
+        function seek(event) {
+            const rect = event.currentTarget.getBoundingClientRect();
+            const percent = (event.clientX - rect.left) / rect.width;
+            audio.currentTime = percent * audio.duration;
+        }
+        function parseLRC(lrc) {
+            const lines = lrc.split('\n');
+            const result = [];
+            const timeExp = /\[(\d{2}):(\d{2})(?:\.(\d{2,3}))?\]/g;
+            for (let line of lines) {
+                let matches;
+                let text = line.replace(timeExp, '').trim();
+                while ((matches = timeExp.exec(line)) !== null) {
+                    let min = parseInt(matches[1]);
+                    let sec = parseInt(matches[2]);
+                    let ms = matches[3] ? parseInt(matches[3].padEnd(3, '0')) : 0;
+                    let time = min * 60 + sec + ms / 1000;
+                    result.push({ time, text });
+                }
+            }
+            result.sort((a, b) => a.time - b.time);
+            return result;
+        }
+        function updateLyrics(currentTime) {
+            if (!lyricsLoaded || !lyricsData.length) return;
+            let newActiveIndex = 0;
+            for (let i = 0; i < lyricsData.length; i++) {
+                if (currentTime >= lyricsData[i].time) newActiveIndex = i;
+                else break;
+            }
+            if (newActiveIndex !== activeLineIndex) {
+                activeLineIndex = newActiveIndex;
+                renderLyrics();
+            }
+            scrollToActiveLine();
+        }
+        function renderLyrics() {
+            let html = '';
+            for (let i = 0; i < lyricsData.length; i++) {
+                let cls = i === activeLineIndex ? 'lyrics-line lyrics-active' : 'lyrics-line';
+                html += `<div class="${cls}">${lyricsData[i].text || '&nbsp;'}</div>`;
+            }
+            lyricsEl.innerHTML = html;
+        }
+        function scrollToActiveLine() {
+            const activeLine = lyricsEl.querySelector('.lyrics-active');
+            if (!activeLine) return;
+            const container = lyricsEl.parentElement;
+            const containerHeight = container.clientHeight;
+            const lineTop = activeLine.offsetTop;
+            const lineHeight = activeLine.offsetHeight;
+            const targetScrollTop = lineTop - (containerHeight / 2) + (lineHeight / 2);
+            lyricsEl.style.transform = `translateY(-${targetScrollTop}px)`;
+        }
+        function loadLyrics() {
+            const lrcFile = audio.src.replace(/\.\w+$/, '.lrc');
+            fetch(lrcFile)
+                .then(res => res.ok ? res.text() : '')
+                .then(lrc => {
+                    if (lrc.trim()) {
+                        lyricsData = parseLRC(lrc);
+                        lyricsLoaded = true;
+                        renderLyrics();
+                    } else {
+                        throw new Error('No lyrics');
+                    }
+                })
+                .catch(() => {
+                    lyricsData = [];
+                    lyricsLoaded = false;
+                    lyricsEl.innerHTML = '<span style="opacity:.7">暂无歌词</span>';
+                });
+        }
+        function setAlbumCover(imageUrl) {
+            albumImg.src = imageUrl;
+        }
+        audio.addEventListener('loadeddata', loadLyrics);
+        if (audio.readyState > 0) loadLyrics();
+        progressBg.addEventListener('mouseenter', () => {
+            if (isPlaying) {
+                progressHandle.style.opacity = '1';
+            }
+        });
+        progressBg.addEventListener('mouseleave', () => {
+            progressHandle.style.opacity = '0';
+        });
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
+            document.querySelector('.nav-links').classList.toggle('show');
+        });
     </script>
 </body>
 
