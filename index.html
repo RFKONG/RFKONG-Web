@@ -128,7 +128,11 @@
                         <span id="song-title">这就是爱</span> - <span id="song-artist">张杰</span>
                     </div>
                     <div class="player-controls">
-                        <button id="playPauseBtn" onclick="togglePlay()">▶</button>
+                        <button id="playPauseBtn" onclick="togglePlay()">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path fill="#ffffff"
+                                    d="M21.409 9.353a2.998 2.998 0 0 1 0 5.294L8.597 21.614C6.534 22.737 4 21.277 4 18.968V5.033c0-2.31 2.534-3.769 4.597-2.648z" />
+                            </svg></button>
                         <span id="current-time">00:00</span>
                         <div class="progress-container" onclick="seek(event)">
                             <div id="progress-bg"></div>
@@ -769,12 +773,12 @@
             }
         }
         audio.addEventListener('play', () => {
-            playPauseBtn.textContent = '⏸';
+            playPauseBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill="#ffffff" fill-rule="evenodd" d="M6.75 3a2 2 0 0 0-2 2v10a2 2 0 1 0 4 0V5a2 2 0 0 0-2-2Zm6.5 0a2 2 0 0 0-2 2v10a2 2 0 1 0 4 0V5a2 2 0 0 0-2-2Z" clip-rule="evenodd"/></svg>';
             isPlaying = true;
             albumImg.classList.add('playing');
         });
         audio.addEventListener('pause', () => {
-            playPauseBtn.textContent = '▶';
+            playPauseBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#ffffff" d="M21.409 9.353a2.998 2.998 0 0 1 0 5.294L8.597 21.614C6.534 22.737 4 21.277 4 18.968V5.033c0-2.31 2.534-3.769 4.597-2.648z"/></svg>';
             isPlaying = false;
             albumImg.classList.remove('playing');
         });
