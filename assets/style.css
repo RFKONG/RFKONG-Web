@@ -306,6 +306,11 @@ canvas {
     transform: scale(1.1);
 }
 
+#playPauseBtn svg {
+    width: 24px;
+    height: 24px;
+}
+
 .progress-container {
     flex-grow: 1;
     height: 8px;
