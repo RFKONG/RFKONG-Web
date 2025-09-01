@@ -4,6 +4,7 @@
     src: url('../fonts/Alimama.woff2') format('woff2');
     font-weight: 350;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -11,11 +12,13 @@
     src: url('../fonts/Alimama.woff2') format('woff2');
     font-weight: 600;
     font-style: normal;
+    font-display: swap;
 }
+
 
 :root {
     --color-primary: #6a82fb;
-    --color-secondary: #f7ccff;
+    --color-secondary: #9fc9ff;
     --color-accent: #ffe066;
     --color-dark: #223244;
     --color-light: #e0e0e0;
@@ -211,7 +214,7 @@ body::-webkit-scrollbar {
     text-align: left;
 }
 
-.main-content h1 span {
+.main-content span {
     background-image: linear-gradient(180deg, var(--color-text));
     background-clip: text;
     -webkit-background-clip: text;
