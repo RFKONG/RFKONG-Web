@@ -17,7 +17,7 @@
 
 
 :root {
-    --color-primary: #6a82fb;
+    --color-primary: #999de9;
     --color-secondary: #9fc9ff;
     --color-accent: #ffe066;
     --color-dark: #223244;
@@ -405,6 +405,32 @@ body::-webkit-scrollbar {
 }
 
 #playPauseBtn svg {
+    width: 24px;
+    height: 24px;
+}
+
+#nextBtn {
+    background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
+    border: none;
+    color: #fff;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s;
+    flex-shrink: 0;
+}
+
+#nextBtn:hover {
+    transform: scale(1.1);
+}
+
+#nextBtn svg {
     width: 24px;
     height: 24px;
 }
