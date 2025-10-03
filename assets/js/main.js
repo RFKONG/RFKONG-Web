@@ -1,15 +1,21 @@
 const songs = [
     {
-        src: "assets/music/夜的尽头.mp3",
-        cover: "assets/music/夜的尽头.jpg",
-        title: "夜的尽头",
-        artist: "邓紫棋"
+        src: "assets/music/overagain.mp3",
+        cover: "assets/music/overagain.jpg",
+        title: "Over Again",
+        artist: "2NATURAL"
     },
     {
         src: "assets/music/这就是爱.mp3",
         cover: "assets/music/这就是爱.jpg",
         title: "这就是爱",
         artist: "张杰"
+    },
+    {
+        src: "assets/music/夜的尽头.mp3",
+        cover: "assets/music/夜的尽头.jpg",
+        title: "夜的尽头",
+        artist: "邓紫棋"
     }
 ];
 let currentSongIndex = 0;
